@@ -90,10 +90,7 @@ export default function ScanTicket() {
 
           {/* Header */}
           <div className="text-center mb-8">
-            <Link to="/" className="inline-flex items-center gap-2 justify-center mb-6">
-              <div className="w-9 h-9 bg-navy rounded-xl flex items-center justify-center">
-                <span className="text-crimson font-extrabold text-xl leading-none">J</span>
-              </div>
+            <Link to="/" className="inline-block mb-6">
               <span className="font-extrabold text-navy text-xl">Jambo Tickets</span>
             </Link>
             <h1 className="text-2xl font-extrabold text-navy">Gate Scanner</h1>

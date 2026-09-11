@@ -1,4 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="8" fill="#1A1A2E"/>
-  <text x="16" y="22" font-family="Inter,sans-serif" font-size="16" font-weight="800" fill="#E94560" text-anchor="middle">J</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <rect width="128" height="128" rx="24" fill="#1A1A2E"/>
+  <text x="64" y="56" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800" fill="#FFFFFF" text-anchor="middle">Jambo</text>
+  <text x="64" y="84" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800" fill="#E94560" text-anchor="middle">Tickets</text>
 </svg>

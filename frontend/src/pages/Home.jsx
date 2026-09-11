@@ -62,8 +62,8 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Jambo Tickets — Kenya's Premier Event Ticketing Platform</title>
-        <meta name="description" content="Buy tickets for the best events in Kenya. Concerts, sports, conferences, festivals and more." />
+        <title>Jambo Tickets — Premier Event Ticketing Platform</title>
+        <meta name="description" content="Discover and book tickets for concerts, sports, conferences, festivals, and more." />
       </Helmet>
 
       {/* Hero */}
@@ -72,30 +72,25 @@ export default function Home() {
           <div className="absolute top-0 right-0 w-96 h-96 bg-crimson rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" />
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-amber rounded-full blur-3xl -translate-x-1/2 translate-y-1/2" />
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 relative">
           <div className="max-w-2xl mx-auto text-center">
-            <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-              <span className="inline-block bg-crimson/20 text-crimson border border-crimson/30 text-xs font-semibold px-3 py-1.5 rounded-full mb-5 tracking-wide uppercase">
-                Kenya's Premier Ticketing Platform
-              </span>
-            </motion.div>
             <motion.h1
-              initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-5 leading-tight"
+              initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
+              className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight"
             >
               Discover &amp; Book{' '}
               <span className="text-crimson">Unforgettable</span> Experiences
             </motion.h1>
             <motion.p
-              initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-gray-300 text-lg mb-9 leading-relaxed"
+              initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }}
+              className="text-gray-300 text-lg mb-8 md:mb-10 leading-relaxed"
             >
-              From Nairobi jazz nights to Mombasa beach festivals — your next great event is one click away.
+              From live concerts and festivals to conferences, sports, and cultural experiences — your next great event is one click away.
             </motion.p>
             <motion.form
-              initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }}
+              initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}
               onSubmit={handleSearch}
-              className="flex gap-2 max-w-xl mx-auto"
+              className="flex flex-col sm:flex-row gap-2 max-w-xl mx-auto"
             >
               <div className="flex-1 relative">
                 <svg className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" /></svg>
@@ -105,7 +100,7 @@ export default function Home() {
                   className="w-full bg-white/10 border border-white/20 text-white placeholder-gray-400 rounded-xl pl-11 pr-4 py-3.5 text-sm focus:outline-none focus:border-white/50 transition-colors"
                 />
               </div>
-              <button type="submit" className="bg-crimson hover:bg-crimson-hover text-white font-semibold px-6 py-3.5 rounded-xl transition-colors text-sm whitespace-nowrap">
+              <button type="submit" className="w-full sm:w-auto bg-crimson hover:bg-crimson-hover text-white font-semibold px-6 py-3.5 rounded-xl transition-colors text-sm whitespace-nowrap">
                 Search
               </button>
             </motion.form>
@@ -198,8 +193,8 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { step: '01', title: 'Browse Events', desc: 'Explore hundreds of events across Kenya — concerts, sports, conferences, and festivals.', icon: <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" /></svg> },
-              { step: '02', title: 'Buy Your Ticket', desc: 'Select your tickets and pay securely via M-Pesa. Instant confirmation with unique QR code.', icon: <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" /></svg> },
+              { step: '01', title: 'Browse Events', desc: 'Explore concerts, sports, conferences, festivals, and cultural experiences in one place.', icon: <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" /></svg> },
+              { step: '02', title: 'Buy Your Ticket', desc: 'Select your tickets and pay securely online. Instant confirmation with a unique QR code.', icon: <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" /></svg> },
               { step: '03', title: 'Attend the Event', desc: 'Show your QR code at the gate. No printout needed — your phone is your ticket.', icon: <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h5.25M7.5 15h3M3.375 5.25c-.621 0-1.125.504-1.125 1.125v3.026a2.999 2.999 0 010 5.198v3.026c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-3.026a2.999 2.999 0 010-5.198V6.375c0-.621-.504-1.125-1.125-1.125H3.375z" /></svg> },
             ].map((item, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
@@ -243,10 +238,10 @@ export default function Home() {
           <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="section-heading mb-4">Are You an Event Organiser?</h2>
             <p className="text-text-secondary mb-8 leading-relaxed">
-              List your event on Jambo Tickets and reach thousands of ticket buyers across Kenya. Easy setup, M-Pesa payouts, real-time analytics.
+              List your event on Jambo Tickets and reach the right audience with easy setup, secure payments, transparent payouts, and real-time analytics.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-              <Link to="/register" className="btn-primary">Create Organiser Account</Link>
+              <Link to="/become-organiser" className="btn-primary">Create Organiser Account</Link>
               <Link to="/about" className="btn-secondary">Learn More</Link>
             </div>
           </motion.div>

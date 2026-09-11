@@ -28,9 +28,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <img src="/src/assets/logo.png" alt="Jambo Tickets" className="h-8 w-8 rounded-lg object-contain" />
-              <span className="font-extrabold text-white text-lg">Jambo Tickets</span>
+            <div className="mb-4">
+              <span className="font-extrabold text-white text-xl tracking-tight">Jambo Tickets</span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-5">
               Kenya's premier event ticketing platform. Buy, sell, and manage event tickets with ease and confidence.

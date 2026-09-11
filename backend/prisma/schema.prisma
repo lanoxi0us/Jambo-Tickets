@@ -53,6 +53,7 @@ model User {
   bookings       Booking[]
   blogPosts      Blog[]
   payoutRequests PayoutRequest[]
+  organiserApplications OrganiserApplication[]
 
   @@map("users")
 }
@@ -193,4 +194,26 @@ model PlatformSettings {
   value String
 
   @@map("platform_settings")
+}
+
+enum ApplicationStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+model OrganiserApplication {
+  id           String            @id @default(cuid())
+  userId       String
+  businessName String
+  description  String
+  phone        String
+  status       ApplicationStatus @default(PENDING)
+  adminNotes   String?
+  createdAt    DateTime          @default(now())
+  updatedAt    DateTime          @updatedAt
+
+  user User @relation(fields: [userId], references: [id])
+
+  @@map("organiser_applications")
 }

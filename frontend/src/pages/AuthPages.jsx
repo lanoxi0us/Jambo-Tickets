@@ -33,8 +33,7 @@ export function Login() {
       <Helmet><title>Log In — Jambo Tickets</title></Helmet>
       <div className="min-h-screen bg-background flex flex-col items-center justify-center px-4 py-12">
         <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} className="w-full max-w-md">
-          <Link to="/" className="flex items-center gap-2 justify-center mb-8">
-            <img src="/src/assets/logo.png" alt="Jambo Tickets" className="h-9 w-9 rounded-xl object-contain" />
+          <Link to="/" className="block text-center mb-8">
             <span className="font-extrabold text-navy text-xl">Jambo Tickets</span>
           </Link>
           <div className="card p-8">
@@ -96,10 +95,7 @@ export function Register() {
       <Helmet><title>Create Account — Jambo Tickets</title></Helmet>
       <div className="min-h-screen bg-background flex flex-col items-center justify-center px-4 py-12">
         <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} className="w-full max-w-md">
-          <Link to="/" className="flex items-center gap-2 justify-center mb-8">
-            <div className="w-9 h-9 bg-navy rounded-xl flex items-center justify-center">
-              <span className="text-crimson font-extrabold text-xl leading-none">J</span>
-            </div>
+          <Link to="/" className="block text-center mb-8">
             <span className="font-extrabold text-navy text-xl">Jambo Tickets</span>
           </Link>
           <div className="card p-8">
@@ -159,10 +155,7 @@ export function ForgotPassword() {
       <Helmet><title>Forgot Password — Jambo Tickets</title></Helmet>
       <div className="min-h-screen bg-background flex items-center justify-center px-4">
         <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} className="w-full max-w-md">
-          <Link to="/" className="flex items-center gap-2 justify-center mb-8">
-            <div className="w-9 h-9 bg-navy rounded-xl flex items-center justify-center">
-              <span className="text-crimson font-extrabold text-xl leading-none">J</span>
-            </div>
+          <Link to="/" className="block text-center mb-8">
             <span className="font-extrabold text-navy text-xl">Jambo Tickets</span>
           </Link>
           <div className="card p-8">
@@ -232,10 +225,7 @@ export function ResetPassword() {
       <Helmet><title>Reset Password — Jambo Tickets</title></Helmet>
       <div className="min-h-screen bg-background flex items-center justify-center px-4">
         <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} className="w-full max-w-md">
-          <Link to="/" className="flex items-center gap-2 justify-center mb-8">
-            <div className="w-9 h-9 bg-navy rounded-xl flex items-center justify-center">
-              <span className="text-crimson font-extrabold text-xl leading-none">J</span>
-            </div>
+          <Link to="/" className="block text-center mb-8">
             <span className="font-extrabold text-navy text-xl">Jambo Tickets</span>
           </Link>
           <div className="card p-8">

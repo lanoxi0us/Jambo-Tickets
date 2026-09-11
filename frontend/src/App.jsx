@@ -11,6 +11,7 @@ import Blog from './pages/Blog'
 import BlogPost from './pages/BlogPost'
 import About from './pages/About'
 import Contact from './pages/Contact'
+import BecomeOrganiser from './pages/BecomeOrganiser'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import ForgotPassword from './pages/ForgotPassword'
@@ -31,6 +32,7 @@ import AdminLayout from './components/AdminLayout'
 import AdminDashboard from './pages/admin/Dashboard'
 import AdminEvents from './pages/admin/Events'
 import AdminUsers from './pages/admin/Users'
+import AdminOrganiserApplications from './pages/admin/OrganiserApplications'
 import AdminBookings from './pages/admin/Bookings'
 import AdminBlog from './pages/admin/Blog'
 import AdminPayouts from './pages/admin/Payouts'
@@ -68,6 +70,7 @@ export default function App() {
         <Route path="/blog/:slug" element={<BlogPost />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/become-organiser" element={<BecomeOrganiser />} />
         <Route path="/my-tickets" element={<ProtectedRoute><MyTickets /></ProtectedRoute>} />
       </Route>
 
@@ -94,6 +97,7 @@ export default function App() {
         <Route index element={<AdminDashboard />} />
         <Route path="events" element={<AdminEvents />} />
         <Route path="users" element={<AdminUsers />} />
+        <Route path="organiser-applications" element={<AdminOrganiserApplications />} />
         <Route path="bookings" element={<AdminBookings />} />
         <Route path="blog" element={<AdminBlog />} />
         <Route path="payouts" element={<AdminPayouts />} />

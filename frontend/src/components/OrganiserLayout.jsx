@@ -18,10 +18,7 @@ function SidebarContent({ onClose }) {
     <div className="flex flex-col h-full bg-navy text-white">
       <div className="p-5 border-b border-white/10 flex items-center justify-between">
         <div>
-          <div className="flex items-center gap-2">
-            <img src="/src/assets/logo.png" alt="Jambo Tickets" className="h-7 w-7 rounded-md object-contain" />
-            <span className="font-bold text-white">Jambo Tickets</span>
-          </div>
+          <span className="font-bold text-white text-lg leading-tight">Jambo Tickets</span>
           <span className="text-xs text-gray-400 mt-0.5 block">Organiser Portal</span>
         </div>
         {onClose && <button onClick={onClose} className="lg:hidden p-1 hover:bg-white/10 rounded"><svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg></button>}

@@ -184,10 +184,60 @@ async function sendPayoutStatusEmail(organiser, payoutRequest, status) {
   });
 }
 
+async function sendOrganiserApplicationReceivedEmail(user, application) {
+  const content = `
+    <h2 style="color:${navyColor};margin:0 0 16px;">Application Received</h2>
+    <p style="color:#374151;line-height:1.6;margin:0 0 16px;">Hi ${user.fullName}, thank you for applying to become an organiser on Jambo Tickets.</p>
+    <p style="color:#374151;line-height:1.6;margin:0 0 16px;">We have received your application for <strong>${application.businessName}</strong> and our team will review it within 1–2 business days.</p>
+    <p style="color:#374151;line-height:1.6;margin:0;">You will receive an email as soon as a decision has been made. No action is needed from you right now.</p>
+  `;
+  await transporter.sendMail({
+    from: process.env.EMAIL_FROM,
+    to: user.email,
+    subject: 'Organiser Application Received — Jambo Tickets',
+    html: emailLayout('Application Received', content),
+  });
+}
+
+async function sendOrganiserApprovalEmail(user) {
+  const content = `
+    <h2 style="color:${navyColor};margin:0 0 16px;">Congratulations, ${user.fullName}!</h2>
+    <p style="color:#374151;line-height:1.6;margin:0 0 16px;">Your application to become an organiser on Jambo Tickets has been <strong>approved</strong>.</p>
+    <p style="color:#374151;line-height:1.6;margin:0 0 24px;">You now have full access to the Organiser Dashboard, where you can create events, manage ticket tiers, view analytics, and request payouts.</p>
+    <a href="${process.env.FRONTEND_URL}/organiser" style="display:inline-block;background:${brandColor};color:#ffffff;padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:600;font-size:15px;">Go to Organiser Dashboard</a>
+    <p style="color:#6B7280;font-size:13px;margin:24px 0 0;">Please log out and log back in if you do not see the Organiser Dashboard option immediately.</p>
+  `;
+  await transporter.sendMail({
+    from: process.env.EMAIL_FROM,
+    to: user.email,
+    subject: 'Your Organiser Application has been Approved — Jambo Tickets',
+    html: emailLayout('Organiser Approved', content),
+  });
+}
+
+async function sendOrganiserRejectionEmail(user, application) {
+  const content = `
+    <h2 style="color:${navyColor};margin:0 0 16px;">Application Update</h2>
+    <p style="color:#374151;line-height:1.6;margin:0 0 16px;">Hi ${user.fullName}, thank you for your interest in becoming an organiser on Jambo Tickets.</p>
+    <p style="color:#374151;line-height:1.6;margin:0 0 16px;">After review, we are unable to approve your application for <strong>${application.businessName}</strong> at this time.</p>
+    ${application.adminNotes ? `<div style="margin:0 0 16px;padding:16px;background:#F8F9FC;border-radius:8px;border-left:4px solid #E94560;"><p style="margin:0;color:#374151;line-height:1.6;">${application.adminNotes}</p></div>` : ''}
+    <p style="color:#374151;line-height:1.6;margin:0;">If you believe this was a mistake or would like more information, please contact us at infojambotickets@gmail.com.</p>
+  `;
+  await transporter.sendMail({
+    from: process.env.EMAIL_FROM,
+    to: user.email,
+    subject: 'Organiser Application Update — Jambo Tickets',
+    html: emailLayout('Application Update', content),
+  });
+}
+
 module.exports = {
   sendWelcomeEmail,
   sendBookingConfirmationEmail,
   sendPasswordResetEmail,
   sendContactAcknowledgement,
   sendPayoutStatusEmail,
+  sendOrganiserApplicationReceivedEmail,
+  sendOrganiserApprovalEmail,
+  sendOrganiserRejectionEmail,
 };

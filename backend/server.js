@@ -16,6 +16,7 @@ const calendarRoutes = require('./src/routes/calendar.routes');
 const payoutRoutes = require('./src/routes/payout.routes');
 const settingsRoutes = require('./src/routes/settings.routes');
 const newsletterRoutes = require('./src/routes/newsletter.routes');
+const organiserApplicationRoutes = require('./src/routes/organiserApplication.routes');
 const { errorHandler } = require('./src/middleware/errorHandler');
 
 const app = express();
@@ -93,6 +94,7 @@ app.use('/api/calendar', generalLimiter, calendarRoutes);
 app.use('/api/payouts', generalLimiter, payoutRoutes);
 app.use('/api/settings', generalLimiter, settingsRoutes);
 app.use('/api/newsletter', generalLimiter, newsletterRoutes);
+app.use('/api/organiser-applications', generalLimiter, organiserApplicationRoutes);
 
 app.get('/api/health', (req, res) => {
   res.json({ success: true, message: 'Jambo Tickets API is running', timestamp: new Date() });
